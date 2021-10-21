@@ -19,7 +19,7 @@ void FillLibraries(LinkedListLibrary &linkedListLibrary, VectorLibrary &vectorLi
     long long bookISBN;
 
     // Try to open file
-    inputFS.open("books.txt");
+    inputFS.open("books2.txt");
 
     while(getline(inputFS, bookTitle)) {
         inputFS >> bookISBN;
@@ -49,6 +49,10 @@ int main (int argc, const char* argv[]) {
 
     // Fill libraries with 100 books
     FillLibraries(linkedListLibrary, vectorLibrary);
+    cout << "initial linked list"  << endl;
+    linkedListLibrary.PrintLibrary();
+    cout << "initial vector list"  << endl;
+    vectorLibrary.PrintLibrary();
 
     // Create new book to insert into libraries
     BookNode* currNode;
@@ -68,15 +72,24 @@ int main (int argc, const char* argv[]) {
     // TODO: Call LL_Library's InsertSorted() method to insert currNode and return
     //       the number of operations performed
 
-    linkedListLibrary.lastNode = currNode;
+//    linkedListLibrary.lastNode = currNode;
 
     // Insert into VectorList
     tempBook  = Book(bookTitle, bookAuthor, bookISBN);
     // TODO: Call VectorLibrary's InsertSorted() method to insert tempBook and return
     //       the number of operations performed
-
+    int linkcounter = linkedListLibrary.InsertSorted(currNode, linkedListOperations);
+    int vectorcounter = vectorLibrary.InsertSorted(tempBook, vectorOperations);
     // TODO: Print number of operations for linked list
 
+    cout << "after insertsort linked list"  << endl;
+    linkedListLibrary.PrintLibrary();
+    cout << "after insertsort vector list"  << endl;
+    vectorLibrary.PrintLibrary();
+
+
+    cout << "LinkedList counter: " << linkcounter << endl;
+    cout << "vector counter: " << vectorcounter << endl;
     // TODO: Print number of operations for vector
 
 }

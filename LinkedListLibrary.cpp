@@ -23,7 +23,11 @@ int LinkedListLibrary::InsertSorted(BookNode* newNode, int counter) {
     BookNode* currNode, nextNode;
 
     // Special case for head node
-    if (headNode == nullptr || headNode->GetBookISBN() >= newNode->GetBookISBN()) {
+    if (headNode == nullptr) {
+        newNode->SetNext(headNode);
+        headNode = newNode;
+        lastNode = headNode;
+    } else if (headNode->GetBookISBN() >= newNode->GetBookISBN()) {
         newNode->SetNext(headNode);
         headNode = newNode;
     }

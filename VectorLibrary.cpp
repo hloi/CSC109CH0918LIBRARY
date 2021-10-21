@@ -14,7 +14,7 @@ int VectorLibrary::InsertSorted(const Book &newBook, int counter) {
 
     // Add an empty element at end of list
     Book emptyBook;
-    library.push_back(emptyBook);
+    library.push_back(emptyBook);  // add an empty node to store the previous book
 
     // Loop through elements starting at the end
     for (int i = library.size() - 2; i >=0; --i) {
