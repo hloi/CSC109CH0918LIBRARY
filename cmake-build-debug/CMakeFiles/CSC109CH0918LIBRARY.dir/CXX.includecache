@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/hloi/CLionProjects/CSC109CH0918LIBRARY/Book.h
+string
+-
+
+C:/Users/hloi/CLionProjects/CSC109CH0918LIBRARY/BookNode.h
+string
+-
+
+C:/Users/hloi/CLionProjects/CSC109CH0918LIBRARY/LinkedListLibrary.h
+BookNode.h
+C:/Users/hloi/CLionProjects/CSC109CH0918LIBRARY/BookNode.h
+
+C:/Users/hloi/CLionProjects/CSC109CH0918LIBRARY/VectorLibrary.h
+Book.h
+C:/Users/hloi/CLionProjects/CSC109CH0918LIBRARY/Book.h
+vector
+-
+
+C:/Users/hloi/CLionProjects/CSC109CH0918LIBRARY/main.cpp
+LinkedListLibrary.h
+C:/Users/hloi/CLionProjects/CSC109CH0918LIBRARY/LinkedListLibrary.h
+VectorLibrary.h
+C:/Users/hloi/CLionProjects/CSC109CH0918LIBRARY/VectorLibrary.h
+BookNode.h
+C:/Users/hloi/CLionProjects/CSC109CH0918LIBRARY/BookNode.h
+Book.h
+C:/Users/hloi/CLionProjects/CSC109CH0918LIBRARY/Book.h
+fstream
+-
+iostream
+-
+
